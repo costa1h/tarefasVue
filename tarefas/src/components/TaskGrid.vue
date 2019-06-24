@@ -3,11 +3,15 @@
         <!--<div v-for="task in tasks" :key="task.name">
             {{task.name}}
         </div>-->
-        <Task v-for="task in tasks" :key="task.name" :task="task"></task>
+        <task v-for="task in tasks" :key="task.name" :task="task"></task>
     </div>
 </template>
 <script>
+    import Task from './Task.vue'
     export default {
+        components: {
+            Task
+        },
         props: {
             tasks: {
                 type: Array,

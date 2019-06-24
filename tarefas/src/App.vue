@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Tarefas</h1>
-   <TaskGrid :tasks="tasks"></taskgrid>
+   <TaskGrid :tasks="tasks"></TaskGrid>
   </div>
 </template>
 

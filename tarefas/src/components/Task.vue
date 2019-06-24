@@ -1,11 +1,11 @@
 <template>
-    <div class="task"><p>{{task.name}}</p></div>
+    <div class="task" :class="stateClass"><p>{{task.name}}</p></div>
 </template>
 <script>
     import Task from './Task.vue'
     export default {
         components: {
-            Task
+
         },
         props: {
             task: {
@@ -16,7 +16,7 @@
         computed: {
             stateClass() {
                 return {
-                    pending: this.task.pendin,
+                    pending: this.task.pending,
                     done: !this.task.pending
                 }
             }
